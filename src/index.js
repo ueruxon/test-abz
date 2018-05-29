@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-class Test extends React.Component {
-  render = () => <div>React is Up</div>
-}
+import App from 'src/App';
 
 ReactDOM.render(
-  <Test>test</Test>,
+  <App/>,
   document.getElementById('react'),
 );
 
