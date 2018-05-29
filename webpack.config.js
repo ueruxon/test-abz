@@ -10,7 +10,8 @@ module.exports = {
         include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader',
         options: {
-          presets: ['env'],
+          presets: ['env', 'stage-2', 'react'],
+          plugins: ['transform-class-properties'],
         },
       },
       {
@@ -50,7 +51,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/index.html'),
-      title: 'ES-6 boilerplate',
+      title: 'React boilerplate',
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin(),
