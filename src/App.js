@@ -1,6 +1,9 @@
 import React from 'react';
-import bug from './index.html'; // shit for html reload in webpack 4
+
+import Header from './components/header/header';
+
+import styles from './main.scss';
 
 export default class App extends React.Component {
-  render = () => <div>React is Up</div>;
+    render = () => <Header />;
 }
