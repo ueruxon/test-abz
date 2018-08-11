@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logo from '../../assets/logo-img.svg';
+import avatar from '../../assets/avatar.png';
 import styles from './header.scss';
 
 
@@ -7,7 +8,7 @@ const Header = () => {
     return <header>
             <div>
                 <a href="#">
-                    <img src="../../assets/logo-img.svg" alt="Denteez" />
+                    <img src={logo} alt="Denteez" />
                 </a>
             </div>
             <div>
@@ -17,7 +18,7 @@ const Header = () => {
                 <button />
                 <button />
                 <div>
-                    <img src="../../assets/avatar.png" alt="avatar" />
+                    <img src={avatar} alt="avatar" />
                     <span>Maximillian Beekeeper</span>
                 </div>
             </div>
