@@ -1,0 +1,33 @@
+
+// ------------- Блок рекламы ------------ \\
+
+.title {
+    display: block;
+    color: #6a7383;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+.adv {
+    height: 300px;
+    overflow: hidden;
+}
+
+.about {
+    display: block;
+    padding-bottom: 15px;
+    margin-top: 6px;
+    color: #d3d3d3;
+    font-size: 11px;
+    text-decoration: none;
+
+    &:hover {
+        color: #71973c;
+    }
+}
+
+// ----------------------------------------------
+
+
+

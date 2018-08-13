@@ -1,0 +1,126 @@
+.left-aside {
+    width: 210px;
+}
+
+.list-item {
+    height: 51px;
+    font-size: 16px;
+    border-bottom: 1px solid #dfe1e5;
+
+    &:hover .item-link {
+        color: #71973c;
+    }
+
+    .item-link {
+        color: #59606b;
+        line-height: 50px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin-right: 23px;
+        }
+    }
+}
+
+// -----------------------------------------------------
+
+// ---------------- Блок рекомендуемых компаний --------
+
+.ads {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dfe1e5;
+    color: #6a7383;
+    height: 50px;
+    font-size: 14px;
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: rgb(28, 37, 52);
+
+        &:hover {
+            color: #71973c;
+        }
+    }
+}
+
+.about-company {
+    display: flex;
+    width: 100%;
+    margin-bottom: 17px;
+    overflow: hidden;
+
+    .about-left {
+        margin-right: 10px;
+        width: 80px;
+
+        a {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    }
+
+    .about-right {
+        width: 60%;
+
+        h4 {
+            color: #1c2534;
+            font-size: 16px;
+            letter-spacing: -1px;
+            margin-bottom: 2px;
+            margin-top: 0px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        span {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+            color: rgb(124, 134, 149);
+        }
+        a {
+            font-size: 11px;
+            color: #1c2534;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+                color: #71973c;
+            }
+        }
+    }
+}
+
+// ---------------------------------------------
+
+// -------- Футер -------
+
+.side-footer {
+    color: #b7bfcd;
+    font-size: 12px;
+    padding-top: 9px;
+    border-top: 1px solid #dfe1e5;
+
+    span {
+        display: block;
+        line-height: 28px;
+    }
+
+    span a {
+        text-decoration: none;
+        color: #b7bfcd;
+        margin-right: 17px;
+    }
+}
