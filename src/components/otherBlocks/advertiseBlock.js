@@ -4,7 +4,7 @@ import styles from './other.scss';
 
 const Advertise = ({ imgSrc }) => {
     return (
-        <div style={{marginBottom: '3px'}}>
+        <div className={styles.wrapC}>
             <span className={styles.title}>Advertisement</span>
             <div className={styles.adv}>
                 <a href="#">

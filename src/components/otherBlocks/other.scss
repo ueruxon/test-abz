@@ -1,11 +1,16 @@
 
 // ------------- Блок рекламы ------------ \\
 
+.wrapC {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #dfe1e5;
+}
+
 .title {
     display: block;
     color: #6a7383;
     height: 50px;
-    line-height: 50px;
+    line-height: 49px;
     font-size: 14px;
 }
 
@@ -16,11 +21,10 @@
 
 .about {
     display: block;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     margin-top: 6px;
     color: #d3d3d3;
     font-size: 11px;
-    text-decoration: none;
 
     &:hover {
         color: #71973c;
@@ -29,5 +33,22 @@
 
 // ----------------------------------------------
 
+.ads {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #6a7383;
+    height: 50px;
+    font-size: 14px;
+
+    a {
+        font-weight: 600;
+        color: rgb(28, 37, 52);
+
+        &:hover {
+            color: #71973c;
+        }
+    }
+}
 
 

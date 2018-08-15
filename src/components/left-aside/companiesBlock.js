@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SeeAll from '../otherBlocks/seeAll';
+
 import styles from './leftAside.scss';
 
 import company1 from '../../assets/others/Company1.png';
@@ -30,10 +32,7 @@ const companies = [
 const Companies = () => {
     return (
         <div>
-            <div className={styles.ads}>
-                <span>Featured companies</span>
-                <a href="#">See all</a>
-            </div>
+            <SeeAll text={'Featured companies'} />
             <ul>
                 {companies.map(company => (
                     <li key={company.id} className={styles['about-company']}>

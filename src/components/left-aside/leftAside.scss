@@ -16,7 +16,6 @@
         line-height: 50px;
         display: flex;
         align-items: center;
-        text-decoration: none;
 
         img {
             display: block;
@@ -30,26 +29,6 @@
 // -----------------------------------------------------
 
 // ---------------- Блок рекомендуемых компаний --------
-
-.ads {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #dfe1e5;
-    color: #6a7383;
-    height: 50px;
-    font-size: 14px;
-
-    a {
-        text-decoration: none;
-        font-weight: 600;
-        color: rgb(28, 37, 52);
-
-        &:hover {
-            color: #71973c;
-        }
-    }
-}
 
 .about-company {
     display: flex;
@@ -93,7 +72,6 @@
         a {
             font-size: 11px;
             color: #1c2534;
-            text-decoration: none;
             font-weight: 600;
 
             &:hover {
@@ -119,8 +97,11 @@
     }
 
     span a {
-        text-decoration: none;
         color: #b7bfcd;
         margin-right: 17px;
+
+        &:hover {
+            color: #71973c;
+        }
     }
 }
