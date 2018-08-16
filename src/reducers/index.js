@@ -1,12 +1,14 @@
 import {
     FETCH_CATEGORIES_REQUEST,
     FETCH_CATEGORIES_SUCCESS,
-    FETCH_CATEGORIES_FAILURE
+    FETCH_CATEGORIES_FAILURE,
 } from '../actions/actionsTypes';
 
 const initialState = {
-    categories: null,
-    isFetching: false
+    categories: [],
+    isFetching: false,
+    error: false,
+
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -20,13 +22,16 @@ export default (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 isFetching: false,
-                categories: payload.data
+                categories: payload.data,
             };
         case FETCH_CATEGORIES_FAILURE:
-            console.log(payload);
             return {
                 ...state,
-                isFetching: false
+                error: {
+                    status: payload.status,
+                    statusText: payload.data.error.message,
+                    description: payload.data.error.description
+                }
             };
         default:
             return state;

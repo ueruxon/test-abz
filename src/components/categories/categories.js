@@ -14,13 +14,15 @@ const CategoriesList = ({ categories }) => {
                     {categories.map(service => (
                         <li key={service.id} className={styles.item}>
                             <a href="#" className={styles.link}>
-                                <div >
+                                <div>
                                     <img
                                         src={service.icon}
                                         alt={service.title}
                                     />
                                 </div>
-                                <span className={styles.title}>{service.title}</span>
+                                <span className={styles.title}>
+                                    {service.title}
+                                </span>
                             </a>
                         </li>
                     ))}

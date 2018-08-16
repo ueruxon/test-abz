@@ -1,6 +1,6 @@
 .content {
     padding: 10px 15px;
-    // width: 70%;
+    width: 100%;
 
     .content-title {
         display: flex;
@@ -45,7 +45,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: flex-start;
     }
 
     .item {
@@ -54,18 +53,19 @@
         margin-left: 6px;
         text-align: center;
 
-        &:hover .link div {
-            background-color: #f3f7fb;
-        }
-
-        &:hover .link .title {
-            color: #71973c;
-        }
-
         .link {
-            display: inline-block;
+            display: block;
             font-size: 14px;
             color: rgb(18, 22, 29);
+            margin-bottom: 15px;
+
+            &:hover div {
+                background-color: #f3f7fb;
+            }
+
+            &:hover .title {
+                color: #71973c;
+            }
 
             div {
                 width: 140px;
@@ -82,7 +82,7 @@
                 display: block;
                 width: 100%;
                 color: #1c2534;
-                margin: 13px 0 15px;
+                margin-top: 13px;
                 min-height: 36px;
             }
         }

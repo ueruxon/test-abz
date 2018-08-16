@@ -29,10 +29,10 @@ export const fetchCategories = () => dispatch => {
                 payload: response.data
             })
         )
-        .catch(error =>
-            dispatch({
+        .catch(error => {
+            return dispatch({
                 type: FETCH_CATEGORIES_FAILURE,
-                payload: error
-            })
-        );
+                payload: error.response
+            });
+        });
 };

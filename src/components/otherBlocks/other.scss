@@ -52,3 +52,17 @@
 }
 
 
+// ------------- Preloader ----------
+
+.preloader {
+    margin-top: 50px;
+
+    span {
+        display: block;
+        margin-top: 20px;
+        color: #6a7383;
+        text-align: center;
+        height: 50px;
+        font-size: 20px;
+    }
+}
