@@ -1,0 +1,55 @@
+header {
+    height: 510px;
+    background-image: url('../../assets/others/landing-face.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #f3f4f6;
+    text-align: center;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 23px 0 50px;
+    }
+
+    .login a {
+        display: inline-block;
+        height: 30px;
+        min-width: 110px;
+        border-radius: 5px;
+        background-color: #87b347;
+        color: #fff;
+        line-height: 30px;
+        font-size: 14px;
+
+        &:hover {
+            background-color: #94c54f;
+        }
+    }
+
+    .title {
+        margin-top: 100px;
+        margin-bottom: 5px;
+        font-size: 48px;
+        color: rgb(243, 244, 246);
+        font-weight: 300;
+    }
+
+    .text {
+        margin: 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+// ---------------- Форма ------------
+
+.wrapper {
+    min-height: 820px;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #e0e2e6;
+    background-image: url('../../assets/others/landing-bg.jpg');
+    background-position: center top;
+}

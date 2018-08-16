@@ -1,17 +1,19 @@
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+
 import {
     FETCH_CATEGORIES_REQUEST,
     FETCH_CATEGORIES_SUCCESS,
-    FETCH_CATEGORIES_FAILURE,
+    FETCH_CATEGORIES_FAILURE
 } from '../actions/actionsTypes';
 
 const initialState = {
     categories: [],
     isFetching: false,
-    error: false,
-
+    error: false
 };
 
-export default (state = initialState, { type, payload }) => {
+const categoriesReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case FETCH_CATEGORIES_REQUEST:
             return {
@@ -22,7 +24,7 @@ export default (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 isFetching: false,
-                categories: payload.data,
+                categories: payload.data
             };
         case FETCH_CATEGORIES_FAILURE:
             return {
@@ -37,3 +39,8 @@ export default (state = initialState, { type, payload }) => {
             return state;
     }
 };
+
+export default combineReducers({
+    categoriesReducer,
+    form: formReducer
+});

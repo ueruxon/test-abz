@@ -53,7 +53,6 @@ class Main extends React.Component {
                                 <strong>Error. Status: {error.status}</strong>
                             </span>
                             <p>{error.description}</p>
-                            <span>Please, trying again</span>
                         </div>
                     </ReactModal>
                     <LoaderBlock loading={isFetch}>
@@ -67,9 +66,9 @@ class Main extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    categories: state.categories,
-    isFetch: state.isFetching,
-    error: state.error
+    categories: state.categoriesReducer.categories,
+    isFetch: state.categoriesReducer.isFetching,
+    error: state.categoriesReducer.error
 });
 
 export default connect(
