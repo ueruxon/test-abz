@@ -3,7 +3,6 @@ import React from 'react';
 import logo from '../../assets/logo-img.svg';
 import avatar from '../../assets/avatar.png';
 
-
 import styles from './header.scss';
 
 const Header = () => {
@@ -14,14 +13,14 @@ const Header = () => {
                     <img src={logo} alt="Denteez" />
                 </a>
             </div>
-            <div className={styles['search-content']}>
+            <div className={styles.searchContent}>
                 <form action="">
                     <input type="text" placeholder="Search" />
                 </form>
             </div>
-            <div className={styles['btn-content']}>
-                <span className={`${styles['icons']} ${styles['chat-icon']}`} />
-                <span className={`${styles['icons']} ${styles['alarm-icon']}`} />
+            <div className={styles.btnContent}>
+                <span className={`${styles.icons} ${styles.chatIcon}`} />
+                <span className={`${styles.icons} ${styles.alarmIcon}`} />
                 <div className={styles.avatar}>
                     <img src={avatar} alt="avatar" />
                     <span>Maximillian Beekeeper</span>

@@ -2,6 +2,7 @@ import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 import { CustomInput, CustomSelect, CustomTextArea } from './fields';
+import { validate } from './validation';
 
 import styles from './index.scss';
 
@@ -10,25 +11,29 @@ let SupportForm = props => {
         <section className={styles.wrapper}>
             <form
                 onSubmit={props.handleSubmit}
-                className={styles['support-form']}
+                className={styles.supportForm}
             >
-                <div className={styles['form-body']}>
+                <div className={styles.formBody}>
                     <span className={styles.textG}>
                         Fields marked “*” are required
                     </span>
                     <Field
-                        name="Enquiry type"
+                        name="types"
                         component={CustomSelect}
                         label="Enquiry type *"
                         types={props.types}
+                        setTypeValue={props.setTypeValue}
+                        typeValue={props.typeValue}
                     />
-                    {/* <Field
-                        name="Subject"
-                        component={CustomInput}
-                        type="text"
-                        placeholder='Other'
-                    /> */}
-                    <div className={styles['form-row']}>
+                    {props.typeValue === 'Other' ? (
+                        <Field
+                            name="otherType"
+                            component={CustomInput}
+                            type="text"
+                            placeholder="Other"
+                        />
+                    ) : null}
+                    <div className={styles.formRow}>
                         <Field
                             name="firstName"
                             component={CustomInput}
@@ -45,24 +50,19 @@ let SupportForm = props => {
                         />
                     </div>
                     <Field
-                        name="Subject"
+                        name="subject"
                         component={CustomInput}
                         type="text"
                         label="Subject *"
                     />
                     <Field
-                        name="Description"
+                        name="description"
                         component={CustomTextArea}
                         type="textarea"
                     />
                 </div>
                 <div className={styles.buttonSubmit}>
-                    <button
-                        type="submit"
-                        disabled={props.pristine || props.submitting}
-                    >
-                        Submit
-                    </button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </section>
@@ -70,7 +70,8 @@ let SupportForm = props => {
 };
 
 SupportForm = reduxForm({
-    form: 'supportForm'
+    form: 'supportForm',
+    validate
 })(SupportForm);
 
 export default SupportForm;

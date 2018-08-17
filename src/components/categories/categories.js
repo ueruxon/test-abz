@@ -5,11 +5,11 @@ import styles from './categories.scss';
 const CategoriesList = ({ categories }) => {
     return (
         <section className={styles.content}>
-            <div className={styles['content-title']}>
+            <div className={styles.contentTitle}>
                 <h1>Service Directory</h1>
                 <a href="#">Add New Service</a>
             </div>
-            <div className={styles['content-body']}>
+            <div className={styles.contentBody}>
                 <ul>
                     {categories.map(service => (
                         <li key={service.id} className={styles.item}>

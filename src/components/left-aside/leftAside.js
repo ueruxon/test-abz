@@ -10,11 +10,11 @@ import styles from './leftAside.scss';
 
 const LeftAside = () => {
     return (
-        <aside className={styles['left-aside']}>
+        <aside className={styles.leftAside}>
             <ListGroup />
             <AdvertiseBlock imgSrc={advertise1} />
             <CompaniesBlock />
-            <div className={styles['side-footer']}>
+            <div className={styles.sideFooter}>
                 <span>Denteez Copyright 2015</span>
                 <span>
                     <a href="#">Terms of use</a>

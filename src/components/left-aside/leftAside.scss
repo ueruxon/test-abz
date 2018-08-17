@@ -1,16 +1,16 @@
-.left-aside {
+.leftAside {
     width: 210px;
 }
 
-.list-item {
+.listItem {
     font-size: 16px;
     border-bottom: 1px solid #dfe1e5;
 
-    &:hover .item-link {
+    &:hover .itemLink {
         color: #71973c;
     }
 
-    .item-link {
+    .itemLink {
         color: #59606b;
         line-height: 50px;
         display: flex;
@@ -29,13 +29,13 @@
 
 // ---------------- Блок рекомендуемых компаний --------
 
-.about-company {
+.aboutCompany {
     display: flex;
     width: 100%;
     margin-bottom: 17px;
     overflow: hidden;
 
-    .about-left {
+    .aboutLeft {
         margin-right: 10px;
         width: 80px;
 
@@ -50,7 +50,7 @@
         }
     }
 
-    .about-right {
+    .aboutRight {
         width: 60%;
 
         h4 {
@@ -84,7 +84,7 @@
 
 // -------- Футер -------
 
-.side-footer {
+.sideFooter {
     color: #b7bfcd;
     font-size: 12px;
     padding-top: 9px;

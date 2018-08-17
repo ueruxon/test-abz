@@ -36,8 +36,8 @@ const ListGroup = () => {
             {
                 group.map(item => {
                     return (
-                        <li key={item.id} className={styles['list-item']}>
-                            <a href="#" className={styles['item-link']}>
+                        <li key={item.id} className={styles.listItem}>
+                            <a href="#" className={styles.itemLink}>
                                 <img src={item.src} alt={item.text} />
                                 <span>{item.text}</span>
                             </a>

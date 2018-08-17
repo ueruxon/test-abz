@@ -56,7 +56,7 @@ const products = [
 
 const RightAside = () => {
     return (
-        <aside className={styles['right-aside']}>
+        <aside className={styles.rightAside}>
             <div className={styles.wrapR}>
                 <SeeAll text={'People you may know'} />
                 <MediaList list={people} />

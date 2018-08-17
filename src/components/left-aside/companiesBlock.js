@@ -35,13 +35,13 @@ const Companies = () => {
             <SeeAll text={'Featured companies'} />
             <ul>
                 {companies.map(company => (
-                    <li key={company.id} className={styles['about-company']}>
-                        <div className={styles['about-left']}>
+                    <li key={company.id} className={styles.aboutCompany}>
+                        <div className={styles.aboutLeft}>
                             <a href="#">
                                 <img src={company.srcImg} alt="name company" />
                             </a>
                         </div>
-                        <div className={styles['about-right']}>
+                        <div className={styles.aboutRight}>
                             <h4>Company Name</h4>
                             <span>{company.category}</span>
                             <span>{company.address}</span>

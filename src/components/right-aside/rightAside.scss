@@ -1,4 +1,4 @@
-.right-aside {
+.rightAside{
     width: 214px;
 
     .wrapR {
@@ -7,7 +7,7 @@
     }
 }
 
-.item-link {
+.itemLink {
     margin-bottom: 5px;
 
     a {
@@ -21,13 +21,13 @@
     }
 }
 
-.media-item {
+.mediaItem {
     display: flex;
     width: 100%;
     margin-bottom: 16px;
     overflow: hidden;
 
-    .item-left {
+    .itemLeft {
         margin-right: 10px;
         width: 80px;
 
@@ -42,7 +42,7 @@
         }
     }
 
-    .item-right {
+    .itemRight {
         width: 60%;
 
         span {

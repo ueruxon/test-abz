@@ -7,16 +7,16 @@ const MediaList = ({ list }) => {
         <ul>
             {list.map(item => (
                 <li key={item.id}>
-                    <div className={styles['item-link']}>
+                    <div className={styles.itemLink}>
                         <a href="#">{item.name}</a>
                     </div>
-                    <div className={styles['media-item']}>
-                        <div className={styles['item-left']}>
+                    <div className={styles.mediaItem}>
+                        <div className={styles.itemLeft}>
                             <a href="#">
                                 <img src={item.img} alt={item.name} />
                             </a>
                         </div>
-                        <div className={styles['item-right']}>
+                        <div className={styles.itemRight}>
                             <span>{item.desc}</span>
                             {item.adress && <span>{item.adress}</span>}
                             {item.adress && <a href="#">Add Friends</a>}

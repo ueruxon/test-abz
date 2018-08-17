@@ -6,9 +6,9 @@ import styles from './index.scss';
 
 const Header = () => {
     return (
-        <header>
+        <header className={styles.headerSupport}>
             <div className={styles.nav}>
-                <div className={styles['logo-wrap']}>
+                <div>
                     <a href="#">
                         <img src={logo} alt="Denteez" />
                     </a>
@@ -19,8 +19,8 @@ const Header = () => {
             </div>
             <h1 className={styles.title}>Home of Dentistry</h1>
             <p className={styles.text}>
-                Denteez was created by dentists for dentistry in order to <br/> make
-                the life of everyone involved in dentistry easier
+                Denteez was created by dentists for dentistry in order to <br />{' '}
+                make the life of everyone involved in dentistry easier
             </p>
         </header>
     );
