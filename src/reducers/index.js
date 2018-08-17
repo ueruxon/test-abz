@@ -4,16 +4,23 @@ import { reducer as formReducer } from 'redux-form';
 import {
     FETCH_CATEGORIES_REQUEST,
     FETCH_CATEGORIES_SUCCESS,
-    FETCH_CATEGORIES_FAILURE
+    FETCH_CATEGORIES_FAILURE,
+    FETCH_ENQUIRY_TYPES_REQUEST,
+    FETCH_ENQUIRY_TYPES_SUCCESS
 } from '../actions/actionsTypes';
 
-const initialState = {
+const categoriesState = {
     categories: [],
     isFetching: false,
     error: false
 };
 
-const categoriesReducer = (state = initialState, { type, payload }) => {
+const typesState = {
+    isFetching: false,
+    types: []
+};
+
+const categoriesReducer = (state = categoriesState, { type, payload }) => {
     switch (type) {
         case FETCH_CATEGORIES_REQUEST:
             return {
@@ -35,12 +42,33 @@ const categoriesReducer = (state = initialState, { type, payload }) => {
                     description: payload.data.error.description
                 }
             };
+
+        default:
+            return state;
+    }
+};
+
+const typesReducer = (state = typesState, { type, payload }) => {
+    switch (type) {
+        case FETCH_ENQUIRY_TYPES_REQUEST:
+            return {
+                ...state,
+                isFetching: true
+            };
+        case FETCH_ENQUIRY_TYPES_SUCCESS:
+            return {
+                ...state,
+                isFetching: false,
+                types: payload.data
+            };
+
         default:
             return state;
     }
 };
 
 export default combineReducers({
+    typesReducer,
     categoriesReducer,
     form: formReducer
 });

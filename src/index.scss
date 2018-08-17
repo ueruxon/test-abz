@@ -1,8 +1,9 @@
-@import "~normalize.css/normalize.css";
-@import "./assets/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf";
+@import '~normalize.css/normalize.css';
+@import './assets/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf';
 
 * {
     box-sizing: border-box;
+    outline-style: none;
 }
 
 body {
