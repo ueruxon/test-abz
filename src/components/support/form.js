@@ -1,45 +1,50 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 
-import { CustomInput, CustomSelect, CustomTextArea } from './fields';
-import { validate } from './validation';
+import {
+    CustomInput,
+    CustomSelect,
+    CustomTextArea,
+    FileUpload
+} from './fields';
+
+import { required, minLength, requiredEmail } from './validation';
 
 import styles from './index.scss';
 
 let SupportForm = props => {
     return (
         <section className={styles.wrapper}>
-            <form
-                onSubmit={props.handleSubmit}
-                className={styles.supportForm}
-            >
+            <form onSubmit={props.handleSubmit} className={styles.supportForm}>
                 <div className={styles.formBody}>
                     <span className={styles.textG}>
                         Fields marked “*” are required
                     </span>
                     <Field
-                        name="types"
+                        name="enquiry_type"
                         component={CustomSelect}
                         label="Enquiry type *"
                         types={props.types}
                         setTypeValue={props.setTypeValue}
-                        typeValue={props.typeValue}
+                        typeValue={props.data.typeValue}
+                        validate={[required]}
                     />
-                    {props.typeValue === 'Other' ? (
+                    {props.data.typeValue === '7' && (
                         <Field
                             name="otherType"
                             component={CustomInput}
                             type="text"
                             placeholder="Other"
                         />
-                    ) : null}
+                    )}
                     <div className={styles.formRow}>
                         <Field
-                            name="firstName"
+                            name="user_name"
                             component={CustomInput}
                             type="text"
                             placeholder="Name"
                             label="Name *"
+                            validate={[required, minLength]}
                         />
                         <Field
                             name="email"
@@ -47,6 +52,7 @@ let SupportForm = props => {
                             type="email"
                             placeholder="Email"
                             label="Email *"
+                            validate={[required, requiredEmail]}
                         />
                     </div>
                     <Field
@@ -54,11 +60,19 @@ let SupportForm = props => {
                         component={CustomInput}
                         type="text"
                         label="Subject *"
+                        validate={[required]}
                     />
                     <Field
                         name="description"
                         component={CustomTextArea}
                         type="textarea"
+                        validate={[required, minLength]}
+                        textArea={props.data.textInArea}
+                        changeTextArea={props.changeTextArea}
+                    />
+                    <FileUpload
+                        upLoadFile={props.upLoadFile}
+                        files={props.data.files}
                     />
                 </div>
                 <div className={styles.buttonSubmit}>
@@ -70,8 +84,7 @@ let SupportForm = props => {
 };
 
 SupportForm = reduxForm({
-    form: 'supportForm',
-    validate
+    form: 'supportForm'
 })(SupportForm);
 
 export default SupportForm;

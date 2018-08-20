@@ -65,7 +65,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'public'),
         watchContentBase: true,
         hot: true,
-        port: 9000,
+        port: 3000,
         index: 'index.html'
     },
     plugins: [

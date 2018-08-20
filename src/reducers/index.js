@@ -6,7 +6,8 @@ import {
     FETCH_CATEGORIES_SUCCESS,
     FETCH_CATEGORIES_FAILURE,
     FETCH_ENQUIRY_TYPES_REQUEST,
-    FETCH_ENQUIRY_TYPES_SUCCESS
+    FETCH_ENQUIRY_TYPES_SUCCESS,
+    SEND_MESSAGE
 } from '../actions/actionsTypes';
 
 const categoriesState = {
@@ -17,7 +18,8 @@ const categoriesState = {
 
 const typesState = {
     isFetching: false,
-    types: []
+    types: [],
+    answer: false
 };
 
 const categoriesReducer = (state = categoriesState, { type, payload }) => {
@@ -61,7 +63,12 @@ const typesReducer = (state = typesState, { type, payload }) => {
                 isFetching: false,
                 types: payload.data
             };
-
+        case SEND_MESSAGE: {
+            return {
+                ...state,
+                answer: payload.data.message
+            }
+        }
         default:
             return state;
     }

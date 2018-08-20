@@ -15,15 +15,15 @@ import styles from './main.scss';
 
 class Main extends React.Component {
     state = {
-        showModal: false
+        showModal: false,
     };
 
     componentDidMount() {
         this.props.fetchCategories();
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.error) {
+    componentDidUpdate(prevProps) {
+        if (prevProps.error !== this.props.error) {
             this.setState({ showModal: true });
         }
     }
@@ -42,7 +42,7 @@ class Main extends React.Component {
                     <LeftAside />
                     <ReactModal
                         isOpen={this.state.showModal}
-                        contentLabel="onRequestClose Example"
+                        contentLabel="Error"
                         onRequestClose={this.handleCloseModal}
                         className={styles.Modal}
                         overlayClassName={styles.Overlay}
