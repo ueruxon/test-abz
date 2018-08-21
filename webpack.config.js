@@ -66,7 +66,8 @@ module.exports = {
         watchContentBase: true,
         hot: true,
         port: 3000,
-        index: 'index.html'
+        index: 'index.html',
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({

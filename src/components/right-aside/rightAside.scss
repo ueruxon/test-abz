@@ -1,4 +1,4 @@
-.rightAside{
+.rightAside {
     width: 214px;
 
     .wrapR {
@@ -11,9 +11,14 @@
     margin-bottom: 5px;
 
     a {
+        max-width: 175px;
+        display: block;
         font-size: 15px;
         color: #1c2534;
         font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &:hover {
             color: #71973c;
