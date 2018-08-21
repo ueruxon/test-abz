@@ -8,4 +8,7 @@ yarn install or npm install
 yarn run dev or npm run dev
 ```
 
-**Go to** http://localhost:3000 
+**Go to:**
+
+Pages main - http://localhost:3000 
+Pages support http://localhost:3000/support
